@@ -21,10 +21,12 @@ $pos = strpos($html, '</table>');
 $html = substr($html, 0, $pos+8);
 $table = $html;
 
+
 date_default_timezone_set("ASIA/BANGKOK");
 echo '<meta charset="UTF-8">';
 //echo $table;
 $data = table2array($table);
+
 
 $new_data = array();
 foreach ($data as $key => $value):
@@ -37,12 +39,12 @@ foreach ($data as $key => $value):
 	);
 endforeach;
 
+
 if (isset($_GET['json'])):
 	echo json_encode($new_data);
+else:
+	check_array($new_data);
 endif;
-
-check_array($new_data);
-
 
 
 function create_timestamp($date, $time) {

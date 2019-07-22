@@ -1,0 +1,3842 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+<link rel="stylesheet" type="text/css" href="../../../css/jquery.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../../css/style.css">
+<link rel="stylesheet" href="../../../css/font-awesome/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="../../../css/component.css" />
+<link rel="stylesheet" href="../../../css/jquery.datetimepicker.css">
+<script type="text/javascript" language="javascript" src="../../../js/jquery-1.12.0.min.js"></script>
+ 	
+<title>ค้นหาข้อมูลน้ำฝนรายวัน</title>
+<div align="center" >
+
+
+<div class="w3-sidebar w3-card-2 w3-bar-block " style="width:190px;right:0"><br>
+<div class=" w3-container">
+   
+	  <form action="water_today_search.php">
+<font size="3">เลือกสถานี</font>
+  <select class="w3-input w3-border" name="storage" >
+    <option value="P.1">P.1</option>
+	    <option value=""></option>
+	    <option value="G.10">G.10</option>
+	    <option value="G.11">G.11</option>
+	    <option value="G.13">G.13</option>
+	    <option value="G.14">G.14</option>
+	    <option value="G.8">G.8</option>
+	    <option value="G.9">G.9</option>
+	    <option value="I.17">I.17</option>
+	    <option value="KH.72">KH.72</option>
+	    <option value="KH.89">KH.89</option>
+	    <option value="N.1">N.1</option>
+	    <option value="N.13A">N.13A</option>
+	    <option value="N.49">N.49</option>
+	    <option value="N.64">N.64</option>
+	    <option value="N.65">N.65</option>
+	    <option value="N.75">N.75</option>
+	    <option value="P.1">P.1</option>
+	    <option value="P.103">P.103</option>
+	    <option value="P.14A">P.14A</option>
+	    <option value="P.20">P.20</option>
+	    <option value="P.21">P.21</option>
+	    <option value="P.24A">P.24A</option>
+	    <option value="P.4A">P.4A</option>
+	    <option value="P.5">P.5</option>
+	    <option value="P.56A">P.56A</option>
+	    <option value="P.64">P.64</option>
+	    <option value="P.65">P.65</option>
+	    <option value="P.67">P.67</option>
+	    <option value="P.7">P.7</option>
+	    <option value="P.71A">P.71A</option>
+	    <option value="P.73">P.73</option>
+	    <option value="P.73A">P.73A</option>
+	    <option value="P.75">P.75</option>
+	    <option value="P.76">P.76</option>
+	    <option value="P.77">P.77</option>
+	    <option value="P.79">P.79</option>
+	    <option value="P.80">P.80</option>
+	    <option value="P.81">P.81</option>
+	    <option value="P.82">P.82</option>
+	    <option value="P.84">P.84</option>
+	    <option value="P.85">P.85</option>
+	    <option value="P.86">P.86</option>
+	    <option value="P.87">P.87</option>
+	    <option value="P.90">P.90</option>
+	    <option value="P.91">P.91</option>
+	    <option value="P.92">P.92</option>
+	    <option value="P.93">P.93</option>
+	    <option value="SW.5A">SW.5A</option>
+	    <option value="W.10A">W.10A</option>
+	    <option value="W.16A">W.16A</option>
+	    <option value="W.17">W.17</option>
+	    <option value="W.17A">W.17A</option>
+	    <option value="W.18A">W.18A</option>
+	    <option value="W.1C">W.1C</option>
+	    <option value="W.20">W.20</option>
+	    <option value="W.21">W.21</option>
+	    <option value="W.22">W.22</option>
+	    <option value="W.25">W.25</option>
+	    <option value="W.26">W.26</option>
+	    <option value="W.3A">W.3A</option>
+	    <option value="W.5A">W.5A</option>
+	    <option value="W.6A">W.6A</option>
+	    <option value="Y.">Y.</option>
+	    <option value="Y.13A">Y.13A</option>
+	    <option value="Y.1C">Y.1C</option>
+	    <option value="Y.20">Y.20</option>
+	    <option value="Y.24">Y.24</option>
+	    <option value="Y.30">Y.30</option>
+	    <option value="Y.31">Y.31</option>
+	    <option value="Y.34">Y.34</option>
+	    <option value="Y.37">Y.37</option>
+	    <option value="Y.38">Y.38</option>
+	    <option value="Y.65">Y.65</option>
+	  </select><br>
+<font size="3">เลือกดูข้อมูลปี</font>
+    <select  class="w3-input w3-border" name="yy" >
+    <option value="2019">2562</option>
+		
+	<option value="2017">2560</option>
+	<option value="2018">2561</option>
+	<option value="2019">2562</option>
+	<option value="2016">2559</option>
+</select><br>
+<font size="3">เลือกดูข้อมูลเดือน</font>
+  <select class="w3-input w3-border" name="mm"  >
+    <option value="07">กรกฎาคม</option>
+    <option value="01">มกราคม</option>
+    <option value="02">กุมภาพันธ์</option>
+    <option value="03">มีนาคม</option>
+	<option value="04">เมษายน</option>
+	<option value="05">พฤษภาคม</option>
+    <option value="06">มิถุนายน</option>
+    <option value="07">กรกฎาคม</option>
+	<option value="08">สิงหาคม</option>
+	<option value="09">กันยายน</option>
+    <option value="10">ตุลาคม</option>
+    <option value="11">พฤศจิกายน</option>
+	<option value="12">ธันวาคม</option>
+  </select><br>
+<font size="3">ตั้งแต่วันที่</font>
+      <select class="w3-input w3-border" name="dd1"  >
+    <option value="">วันที่</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+	<option value="8">8</option>
+	<option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+	<option value="12">12</option>
+	<option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+	<option value="17">17</option>
+	<option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+	<option value="21">21</option>
+	<option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+	<option value="25">25</option>
+	<option value="26">26</option>
+    <option value="27">27</option>
+	<option value="28">28</option>
+	<option value="29">29</option>
+    <option value="30">30</option>
+    <option value="31">31</option>
+  </select><br>
+
+<font size="3">ถึงวันที่</font>
+    <select class="w3-input w3-border" name="dd2"  >
+    <option value="">วันที่</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+	<option value="8">8</option>
+	<option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+	<option value="12">12</option>
+	<option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+	<option value="17">17</option>
+	<option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+	<option value="21">21</option>
+	<option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+	<option value="25">25</option>
+	<option value="26">26</option>
+    <option value="27">27</option>
+	<option value="28">28</option>
+	<option value="29">29</option>
+    <option value="30">30</option>
+    <option value="31">31</option>
+  </select><br>
+<input type="submit" value="ค้นหา" class="w3-button w3-red">
+	  </form>
+<br>
+</div></div>
+<div style="margin-right:190px"><br>
+<div class=" w3-container">
+
+  <font size="5">ค้นหาข้อมูล ระดับน้ำรายชั่วโมง</font><br><br>
+  <font size="3">สถานี&nbsp;&nbsp;P.1&nbsp;&nbsp;สะพานนวรัฐ&nbsp;&nbsp;ปิง&nbsp;&nbsp;ต.วัดเกตุ&nbsp;&nbsp; อ.เมือง&nbsp;&nbsp;จ.เชียงใหม่</font>
+  <div align="right">
+  	<a href="water_today_pdf.php?station01=P.1&yy=2019&mm=07&dd=&dd2=" class="w3-button w3-red w3-text-white"><i class="fa fa-file-pdf-o fa-lg" aria-hidden="true"></i> PDF</a>
+
+  	<a href="water_today_excel.php?station01=P.1&yy=2019&mm=07&dd=&dd2=" class="w3-button w3-blue w3-text-white"><i class="fa fa-file-excel-o fa-lg" aria-hidden="true"></i> Excal</a>
+
+	<a href="../../PORTAL/4-RUNOFF.php" class="w3-button w3-green w3-text-white"><i class="fa fa fa-reply fa-lg" aria-hidden="true"></i> กลับ</a></div>
+  
+<table  class="w3-table  w3-border w3-card-2 w3-centered">
+
+                    <tr align="center">
+						<th bgcolor="#DDE8DD">วันที่</th>
+						<th bgcolor="#DDE8DD">เวลา</th>
+						<th bgcolor="#DDE8DD">ระดับน้ำ  3.70 (ม.)</th>
+						<th bgcolor="#DDE8DD">ปริมาณน้ำ 490 (ลบ.ม/วิ)</th>
+                    </tr>
+                   
+                     
+	
+		<tr>
+		<td>01 กรกฎาคม 2562</td>
+		<td>01.00 น.</td>
+		<td>1.05</td>
+		<td>5.00</td>
+		</tr>
+			
+		<tr>
+		<td>01 กรกฎาคม 2562</td>
+		<td>02.00 น.</td>
+		<td>1.05</td>
+		<td>5.00</td>
+		</tr>
+			
+		<tr>
+		<td>01 กรกฎาคม 2562</td>
+		<td>03.00 น.</td>
+		<td>1.05</td>
+		<td>5.00</td>
+		</tr>
+			
+		<tr>
+		<td>01 กรกฎาคม 2562</td>
+		<td>04.00 น.</td>
+		<td>1.05</td>
+		<td>5.00</td>
+		</tr>
+			
+		<tr>
+		<td>01 กรกฎาคม 2562</td>
+		<td>05.00 น.</td>
+		<td>1.05</td>
+		<td>5.00</td>
+		</tr>
+			
+		<tr>
+		<td>01 กรกฎาคม 2562</td>
+		<td>06.00 น.</td>
+		<td>1.05</td>
+		<td>5.00</td>
+		</tr>
+			
+		<tr>
+		<td>01 กรกฎาคม 2562</td>
+		<td>07.00 น.</td>
+		<td>1.04</td>
+		<td>4.60</td>
+		</tr>
+			
+		<tr>
+		<td>01 กรกฎาคม 2562</td>
+		<td>08.00 น.</td>
+		<td>1.04</td>
+		<td>4.60</td>
+		</tr>
+			
+		<tr>
+		<td>01 กรกฎาคม 2562</td>
+		<td>09.00 น.</td>
+		<td>1.03</td>
+		<td>4.20</td>
+		</tr>
+			
+		<tr>
+		<td>01 กรกฎาคม 2562</td>
+		<td>10.00 น.</td>
+		<td>1.02</td>
+		<td>3.80</td>
+		</tr>
+			
+		<tr>
+		<td>01 กรกฎาคม 2562</td>
+		<td>11.00 น.</td>
+		<td>1.02</td>
+		<td>3.80</td>
+		</tr>
+			
+		<tr>
+		<td>01 กรกฎาคม 2562</td>
+		<td>12.00 น.</td>
+		<td>1.01</td>
+		<td>3.40</td>
+		</tr>
+			
+		<tr>
+		<td>01 กรกฎาคม 2562</td>
+		<td>13.00 น.</td>
+		<td>1.01</td>
+		<td>3.40</td>
+		</tr>
+			
+		<tr>
+		<td>01 กรกฎาคม 2562</td>
+		<td>14.00 น.</td>
+		<td>1.01</td>
+		<td>3.40</td>
+		</tr>
+			
+		<tr>
+		<td>01 กรกฎาคม 2562</td>
+		<td>15.00 น.</td>
+		<td>1.01</td>
+		<td>3.40</td>
+		</tr>
+			
+		<tr>
+		<td>01 กรกฎาคม 2562</td>
+		<td>16.00 น.</td>
+		<td>1.02</td>
+		<td>3.80</td>
+		</tr>
+			
+		<tr>
+		<td>01 กรกฎาคม 2562</td>
+		<td>17.00 น.</td>
+		<td>1.02</td>
+		<td>3.80</td>
+		</tr>
+			
+		<tr>
+		<td>01 กรกฎาคม 2562</td>
+		<td>18.00 น.</td>
+		<td>1.02</td>
+		<td>3.80</td>
+		</tr>
+			
+		<tr>
+		<td>01 กรกฎาคม 2562</td>
+		<td>19.00 น.</td>
+		<td>1.02</td>
+		<td>3.80</td>
+		</tr>
+			
+		<tr>
+		<td>01 กรกฎาคม 2562</td>
+		<td>20.00 น.</td>
+		<td>1.02</td>
+		<td>3.80</td>
+		</tr>
+			
+		<tr>
+		<td>01 กรกฎาคม 2562</td>
+		<td>21.00 น.</td>
+		<td>1.02</td>
+		<td>3.80</td>
+		</tr>
+			
+		<tr>
+		<td>01 กรกฎาคม 2562</td>
+		<td>22.00 น.</td>
+		<td>1.02</td>
+		<td>3.80</td>
+		</tr>
+			
+		<tr>
+		<td>01 กรกฎาคม 2562</td>
+		<td>23.00 น.</td>
+		<td>1.01</td>
+		<td>3.40</td>
+		</tr>
+			
+		<tr>
+		<td>01 กรกฎาคม 2562</td>
+		<td>24.00 น.</td>
+		<td>1.01</td>
+		<td>3.40</td>
+		</tr>
+								
+		<tr>
+		<td>02 กรกฎาคม 2562</td>
+		<td>01.00 น.</td>
+		<td>1.01</td>
+		<td>3.40</td>
+		</tr>
+			
+		<tr>
+		<td>02 กรกฎาคม 2562</td>
+		<td>02.00 น.</td>
+		<td>1.01</td>
+		<td>3.40</td>
+		</tr>
+			
+		<tr>
+		<td>02 กรกฎาคม 2562</td>
+		<td>03.00 น.</td>
+		<td>1.01</td>
+		<td>3.40</td>
+		</tr>
+			
+		<tr>
+		<td>02 กรกฎาคม 2562</td>
+		<td>04.00 น.</td>
+		<td>1.01</td>
+		<td>3.40</td>
+		</tr>
+			
+		<tr>
+		<td>02 กรกฎาคม 2562</td>
+		<td>05.00 น.</td>
+		<td>1.01</td>
+		<td>3.40</td>
+		</tr>
+			
+		<tr>
+		<td>02 กรกฎาคม 2562</td>
+		<td>06.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>02 กรกฎาคม 2562</td>
+		<td>07.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>02 กรกฎาคม 2562</td>
+		<td>08.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>02 กรกฎาคม 2562</td>
+		<td>09.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>02 กรกฎาคม 2562</td>
+		<td>10.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>02 กรกฎาคม 2562</td>
+		<td>11.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>02 กรกฎาคม 2562</td>
+		<td>12.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>02 กรกฎาคม 2562</td>
+		<td>13.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>02 กรกฎาคม 2562</td>
+		<td>14.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>02 กรกฎาคม 2562</td>
+		<td>15.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>02 กรกฎาคม 2562</td>
+		<td>16.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>02 กรกฎาคม 2562</td>
+		<td>17.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>02 กรกฎาคม 2562</td>
+		<td>18.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>02 กรกฎาคม 2562</td>
+		<td>19.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>02 กรกฎาคม 2562</td>
+		<td>20.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>02 กรกฎาคม 2562</td>
+		<td>21.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>02 กรกฎาคม 2562</td>
+		<td>22.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>02 กรกฎาคม 2562</td>
+		<td>23.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>02 กรกฎาคม 2562</td>
+		<td>24.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+								
+		<tr>
+		<td>03 กรกฎาคม 2562</td>
+		<td>01.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>03 กรกฎาคม 2562</td>
+		<td>02.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>03 กรกฎาคม 2562</td>
+		<td>03.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>03 กรกฎาคม 2562</td>
+		<td>04.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>03 กรกฎาคม 2562</td>
+		<td>05.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>03 กรกฎาคม 2562</td>
+		<td>06.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>03 กรกฎาคม 2562</td>
+		<td>07.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>03 กรกฎาคม 2562</td>
+		<td>08.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>03 กรกฎาคม 2562</td>
+		<td>09.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>03 กรกฎาคม 2562</td>
+		<td>10.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>03 กรกฎาคม 2562</td>
+		<td>11.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>03 กรกฎาคม 2562</td>
+		<td>12.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>03 กรกฎาคม 2562</td>
+		<td>13.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>03 กรกฎาคม 2562</td>
+		<td>14.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>03 กรกฎาคม 2562</td>
+		<td>15.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>03 กรกฎาคม 2562</td>
+		<td>16.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>03 กรกฎาคม 2562</td>
+		<td>17.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>03 กรกฎาคม 2562</td>
+		<td>18.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>03 กรกฎาคม 2562</td>
+		<td>19.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>03 กรกฎาคม 2562</td>
+		<td>20.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>03 กรกฎาคม 2562</td>
+		<td>21.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>03 กรกฎาคม 2562</td>
+		<td>22.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>03 กรกฎาคม 2562</td>
+		<td>23.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>03 กรกฎาคม 2562</td>
+		<td>24.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+								
+		<tr>
+		<td>04 กรกฎาคม 2562</td>
+		<td>01.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>04 กรกฎาคม 2562</td>
+		<td>02.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>04 กรกฎาคม 2562</td>
+		<td>03.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>04 กรกฎาคม 2562</td>
+		<td>04.00 น.</td>
+		<td>1.01</td>
+		<td>3.40</td>
+		</tr>
+			
+		<tr>
+		<td>04 กรกฎาคม 2562</td>
+		<td>05.00 น.</td>
+		<td>1.01</td>
+		<td>3.40</td>
+		</tr>
+			
+		<tr>
+		<td>04 กรกฎาคม 2562</td>
+		<td>06.00 น.</td>
+		<td>1.01</td>
+		<td>3.40</td>
+		</tr>
+			
+		<tr>
+		<td>04 กรกฎาคม 2562</td>
+		<td>07.00 น.</td>
+		<td>1.02</td>
+		<td>3.80</td>
+		</tr>
+			
+		<tr>
+		<td>04 กรกฎาคม 2562</td>
+		<td>08.00 น.</td>
+		<td>1.02</td>
+		<td>3.80</td>
+		</tr>
+			
+		<tr>
+		<td>04 กรกฎาคม 2562</td>
+		<td>09.00 น.</td>
+		<td>1.02</td>
+		<td>3.80</td>
+		</tr>
+			
+		<tr>
+		<td>04 กรกฎาคม 2562</td>
+		<td>10.00 น.</td>
+		<td>1.01</td>
+		<td>3.40</td>
+		</tr>
+			
+		<tr>
+		<td>04 กรกฎาคม 2562</td>
+		<td>11.00 น.</td>
+		<td>1.01</td>
+		<td>3.40</td>
+		</tr>
+			
+		<tr>
+		<td>04 กรกฎาคม 2562</td>
+		<td>12.00 น.</td>
+		<td>1.01</td>
+		<td>3.40</td>
+		</tr>
+			
+		<tr>
+		<td>04 กรกฎาคม 2562</td>
+		<td>13.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>04 กรกฎาคม 2562</td>
+		<td>14.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>04 กรกฎาคม 2562</td>
+		<td>15.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>04 กรกฎาคม 2562</td>
+		<td>16.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>04 กรกฎาคม 2562</td>
+		<td>17.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>04 กรกฎาคม 2562</td>
+		<td>18.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>04 กรกฎาคม 2562</td>
+		<td>19.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>04 กรกฎาคม 2562</td>
+		<td>20.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>04 กรกฎาคม 2562</td>
+		<td>21.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>04 กรกฎาคม 2562</td>
+		<td>22.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>04 กรกฎาคม 2562</td>
+		<td>23.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>04 กรกฎาคม 2562</td>
+		<td>24.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+								
+		<tr>
+		<td>05 กรกฎาคม 2562</td>
+		<td>01.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>05 กรกฎาคม 2562</td>
+		<td>02.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>05 กรกฎาคม 2562</td>
+		<td>03.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>05 กรกฎาคม 2562</td>
+		<td>04.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>05 กรกฎาคม 2562</td>
+		<td>05.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>05 กรกฎาคม 2562</td>
+		<td>06.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>05 กรกฎาคม 2562</td>
+		<td>07.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>05 กรกฎาคม 2562</td>
+		<td>08.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>05 กรกฎาคม 2562</td>
+		<td>09.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>05 กรกฎาคม 2562</td>
+		<td>10.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>05 กรกฎาคม 2562</td>
+		<td>11.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>05 กรกฎาคม 2562</td>
+		<td>12.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>05 กรกฎาคม 2562</td>
+		<td>13.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>05 กรกฎาคม 2562</td>
+		<td>14.00 น.</td>
+		<td>1.01</td>
+		<td>3.40</td>
+		</tr>
+			
+		<tr>
+		<td>05 กรกฎาคม 2562</td>
+		<td>15.00 น.</td>
+		<td>1.01</td>
+		<td>3.40</td>
+		</tr>
+			
+		<tr>
+		<td>05 กรกฎาคม 2562</td>
+		<td>16.00 น.</td>
+		<td>1.04</td>
+		<td>4.60</td>
+		</tr>
+			
+		<tr>
+		<td>05 กรกฎาคม 2562</td>
+		<td>17.00 น.</td>
+		<td>1.06</td>
+		<td>5.40</td>
+		</tr>
+			
+		<tr>
+		<td>05 กรกฎาคม 2562</td>
+		<td>18.00 น.</td>
+		<td>1.07</td>
+		<td>5.80</td>
+		</tr>
+			
+		<tr>
+		<td>05 กรกฎาคม 2562</td>
+		<td>19.00 น.</td>
+		<td>1.09</td>
+		<td>6.60</td>
+		</tr>
+			
+		<tr>
+		<td>05 กรกฎาคม 2562</td>
+		<td>20.00 น.</td>
+		<td>1.12</td>
+		<td>7.80</td>
+		</tr>
+			
+		<tr>
+		<td>05 กรกฎาคม 2562</td>
+		<td>21.00 น.</td>
+		<td>1.14</td>
+		<td>8.60</td>
+		</tr>
+			
+		<tr>
+		<td>05 กรกฎาคม 2562</td>
+		<td>22.00 น.</td>
+		<td>1.16</td>
+		<td>9.40</td>
+		</tr>
+			
+		<tr>
+		<td>05 กรกฎาคม 2562</td>
+		<td>23.00 น.</td>
+		<td>1.17</td>
+		<td>9.80</td>
+		</tr>
+			
+		<tr>
+		<td>05 กรกฎาคม 2562</td>
+		<td>24.00 น.</td>
+		<td>1.18</td>
+		<td>10.20</td>
+		</tr>
+								
+		<tr>
+		<td>06 กรกฎาคม 2562</td>
+		<td>01.00 น.</td>
+		<td>1.18</td>
+		<td>10.20</td>
+		</tr>
+			
+		<tr>
+		<td>06 กรกฎาคม 2562</td>
+		<td>02.00 น.</td>
+		<td>1.19</td>
+		<td>10.60</td>
+		</tr>
+			
+		<tr>
+		<td>06 กรกฎาคม 2562</td>
+		<td>03.00 น.</td>
+		<td>1.20</td>
+		<td>11.00</td>
+		</tr>
+			
+		<tr>
+		<td>06 กรกฎาคม 2562</td>
+		<td>04.00 น.</td>
+		<td>1.20</td>
+		<td>11.00</td>
+		</tr>
+			
+		<tr>
+		<td>06 กรกฎาคม 2562</td>
+		<td>05.00 น.</td>
+		<td>1.20</td>
+		<td>11.00</td>
+		</tr>
+			
+		<tr>
+		<td>06 กรกฎาคม 2562</td>
+		<td>06.00 น.</td>
+		<td>1.21</td>
+		<td>11.50</td>
+		</tr>
+			
+		<tr>
+		<td>06 กรกฎาคม 2562</td>
+		<td>07.00 น.</td>
+		<td>1.21</td>
+		<td>11.50</td>
+		</tr>
+			
+		<tr>
+		<td>06 กรกฎาคม 2562</td>
+		<td>08.00 น.</td>
+		<td>1.22</td>
+		<td>12.00</td>
+		</tr>
+			
+		<tr>
+		<td>06 กรกฎาคม 2562</td>
+		<td>09.00 น.</td>
+		<td>1.22</td>
+		<td>12.00</td>
+		</tr>
+			
+		<tr>
+		<td>06 กรกฎาคม 2562</td>
+		<td>10.00 น.</td>
+		<td>1.23</td>
+		<td>12.50</td>
+		</tr>
+			
+		<tr>
+		<td>06 กรกฎาคม 2562</td>
+		<td>11.00 น.</td>
+		<td>1.23</td>
+		<td>12.50</td>
+		</tr>
+			
+		<tr>
+		<td>06 กรกฎาคม 2562</td>
+		<td>12.00 น.</td>
+		<td>1.24</td>
+		<td>13.00</td>
+		</tr>
+			
+		<tr>
+		<td>06 กรกฎาคม 2562</td>
+		<td>13.00 น.</td>
+		<td>1.25</td>
+		<td>13.50</td>
+		</tr>
+			
+		<tr>
+		<td>06 กรกฎาคม 2562</td>
+		<td>14.00 น.</td>
+		<td>1.25</td>
+		<td>13.50</td>
+		</tr>
+			
+		<tr>
+		<td>06 กรกฎาคม 2562</td>
+		<td>15.00 น.</td>
+		<td>1.26</td>
+		<td>14.00</td>
+		</tr>
+			
+		<tr>
+		<td>06 กรกฎาคม 2562</td>
+		<td>16.00 น.</td>
+		<td>1.27</td>
+		<td>14.50</td>
+		</tr>
+			
+		<tr>
+		<td>06 กรกฎาคม 2562</td>
+		<td>17.00 น.</td>
+		<td>1.28</td>
+		<td>15.00</td>
+		</tr>
+			
+		<tr>
+		<td>06 กรกฎาคม 2562</td>
+		<td>18.00 น.</td>
+		<td>1.28</td>
+		<td>15.00</td>
+		</tr>
+			
+		<tr>
+		<td>06 กรกฎาคม 2562</td>
+		<td>19.00 น.</td>
+		<td>1.29</td>
+		<td>15.50</td>
+		</tr>
+			
+		<tr>
+		<td>06 กรกฎาคม 2562</td>
+		<td>20.00 น.</td>
+		<td>1.29</td>
+		<td>15.50</td>
+		</tr>
+			
+		<tr>
+		<td>06 กรกฎาคม 2562</td>
+		<td>21.00 น.</td>
+		<td>1.29</td>
+		<td>15.50</td>
+		</tr>
+			
+		<tr>
+		<td>06 กรกฎาคม 2562</td>
+		<td>22.00 น.</td>
+		<td>1.30</td>
+		<td>16.00</td>
+		</tr>
+			
+		<tr>
+		<td>06 กรกฎาคม 2562</td>
+		<td>23.00 น.</td>
+		<td>1.30</td>
+		<td>16.00</td>
+		</tr>
+			
+		<tr>
+		<td>06 กรกฎาคม 2562</td>
+		<td>24.00 น.</td>
+		<td>1.31</td>
+		<td>16.50</td>
+		</tr>
+								
+		<tr>
+		<td>07 กรกฎาคม 2562</td>
+		<td>01.00 น.</td>
+		<td>1.30</td>
+		<td>16.00</td>
+		</tr>
+			
+		<tr>
+		<td>07 กรกฎาคม 2562</td>
+		<td>02.00 น.</td>
+		<td>1.29</td>
+		<td>15.50</td>
+		</tr>
+			
+		<tr>
+		<td>07 กรกฎาคม 2562</td>
+		<td>03.00 น.</td>
+		<td>1.29</td>
+		<td>15.50</td>
+		</tr>
+			
+		<tr>
+		<td>07 กรกฎาคม 2562</td>
+		<td>04.00 น.</td>
+		<td>1.28</td>
+		<td>15.00</td>
+		</tr>
+			
+		<tr>
+		<td>07 กรกฎาคม 2562</td>
+		<td>05.00 น.</td>
+		<td>1.28</td>
+		<td>15.00</td>
+		</tr>
+			
+		<tr>
+		<td>07 กรกฎาคม 2562</td>
+		<td>06.00 น.</td>
+		<td>1.27</td>
+		<td>14.50</td>
+		</tr>
+			
+		<tr>
+		<td>07 กรกฎาคม 2562</td>
+		<td>07.00 น.</td>
+		<td>1.26</td>
+		<td>14.00</td>
+		</tr>
+			
+		<tr>
+		<td>07 กรกฎาคม 2562</td>
+		<td>08.00 น.</td>
+		<td>1.25</td>
+		<td>13.50</td>
+		</tr>
+			
+		<tr>
+		<td>07 กรกฎาคม 2562</td>
+		<td>09.00 น.</td>
+		<td>1.24</td>
+		<td>13.00</td>
+		</tr>
+			
+		<tr>
+		<td>07 กรกฎาคม 2562</td>
+		<td>10.00 น.</td>
+		<td>1.23</td>
+		<td>12.50</td>
+		</tr>
+			
+		<tr>
+		<td>07 กรกฎาคม 2562</td>
+		<td>11.00 น.</td>
+		<td>1.21</td>
+		<td>11.50</td>
+		</tr>
+			
+		<tr>
+		<td>07 กรกฎาคม 2562</td>
+		<td>12.00 น.</td>
+		<td>1.19</td>
+		<td>10.60</td>
+		</tr>
+			
+		<tr>
+		<td>07 กรกฎาคม 2562</td>
+		<td>13.00 น.</td>
+		<td>1.18</td>
+		<td>10.20</td>
+		</tr>
+			
+		<tr>
+		<td>07 กรกฎาคม 2562</td>
+		<td>14.00 น.</td>
+		<td>1.16</td>
+		<td>9.40</td>
+		</tr>
+			
+		<tr>
+		<td>07 กรกฎาคม 2562</td>
+		<td>15.00 น.</td>
+		<td>1.15</td>
+		<td>9.00</td>
+		</tr>
+			
+		<tr>
+		<td>07 กรกฎาคม 2562</td>
+		<td>16.00 น.</td>
+		<td>1.14</td>
+		<td>8.60</td>
+		</tr>
+			
+		<tr>
+		<td>07 กรกฎาคม 2562</td>
+		<td>17.00 น.</td>
+		<td>1.11</td>
+		<td>7.40</td>
+		</tr>
+			
+		<tr>
+		<td>07 กรกฎาคม 2562</td>
+		<td>18.00 น.</td>
+		<td>1.10</td>
+		<td>7.00</td>
+		</tr>
+			
+		<tr>
+		<td>07 กรกฎาคม 2562</td>
+		<td>19.00 น.</td>
+		<td>1.09</td>
+		<td>6.60</td>
+		</tr>
+			
+		<tr>
+		<td>07 กรกฎาคม 2562</td>
+		<td>20.00 น.</td>
+		<td>1.07</td>
+		<td>5.80</td>
+		</tr>
+			
+		<tr>
+		<td>07 กรกฎาคม 2562</td>
+		<td>21.00 น.</td>
+		<td>1.05</td>
+		<td>5.00</td>
+		</tr>
+			
+		<tr>
+		<td>07 กรกฎาคม 2562</td>
+		<td>22.00 น.</td>
+		<td>1.03</td>
+		<td>4.20</td>
+		</tr>
+			
+		<tr>
+		<td>07 กรกฎาคม 2562</td>
+		<td>23.00 น.</td>
+		<td>1.03</td>
+		<td>4.20</td>
+		</tr>
+			
+		<tr>
+		<td>07 กรกฎาคม 2562</td>
+		<td>24.00 น.</td>
+		<td>1.03</td>
+		<td>4.20</td>
+		</tr>
+								
+		<tr>
+		<td>08 กรกฎาคม 2562</td>
+		<td>01.00 น.</td>
+		<td>1.02</td>
+		<td>3.80</td>
+		</tr>
+			
+		<tr>
+		<td>08 กรกฎาคม 2562</td>
+		<td>02.00 น.</td>
+		<td>1.02</td>
+		<td>3.80</td>
+		</tr>
+			
+		<tr>
+		<td>08 กรกฎาคม 2562</td>
+		<td>03.00 น.</td>
+		<td>1.01</td>
+		<td>3.40</td>
+		</tr>
+			
+		<tr>
+		<td>08 กรกฎาคม 2562</td>
+		<td>04.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>08 กรกฎาคม 2562</td>
+		<td>05.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>08 กรกฎาคม 2562</td>
+		<td>06.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>08 กรกฎาคม 2562</td>
+		<td>07.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>08 กรกฎาคม 2562</td>
+		<td>08.00 น.</td>
+		<td>0.97</td>
+		<td>2.55</td>
+		</tr>
+			
+		<tr>
+		<td>08 กรกฎาคม 2562</td>
+		<td>09.00 น.</td>
+		<td>0.97</td>
+		<td>2.55</td>
+		</tr>
+			
+		<tr>
+		<td>08 กรกฎาคม 2562</td>
+		<td>10.00 น.</td>
+		<td>0.96</td>
+		<td>2.40</td>
+		</tr>
+			
+		<tr>
+		<td>08 กรกฎาคม 2562</td>
+		<td>11.00 น.</td>
+		<td>0.96</td>
+		<td>2.40</td>
+		</tr>
+			
+		<tr>
+		<td>08 กรกฎาคม 2562</td>
+		<td>12.00 น.</td>
+		<td>0.96</td>
+		<td>2.40</td>
+		</tr>
+			
+		<tr>
+		<td>08 กรกฎาคม 2562</td>
+		<td>13.00 น.</td>
+		<td>0.96</td>
+		<td>2.40</td>
+		</tr>
+			
+		<tr>
+		<td>08 กรกฎาคม 2562</td>
+		<td>14.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>08 กรกฎาคม 2562</td>
+		<td>15.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>08 กรกฎาคม 2562</td>
+		<td>16.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>08 กรกฎาคม 2562</td>
+		<td>17.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>08 กรกฎาคม 2562</td>
+		<td>18.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>08 กรกฎาคม 2562</td>
+		<td>19.00 น.</td>
+		<td>0.94</td>
+		<td>2.10</td>
+		</tr>
+			
+		<tr>
+		<td>08 กรกฎาคม 2562</td>
+		<td>20.00 น.</td>
+		<td>0.94</td>
+		<td>2.10</td>
+		</tr>
+			
+		<tr>
+		<td>08 กรกฎาคม 2562</td>
+		<td>21.00 น.</td>
+		<td>0.94</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>08 กรกฎาคม 2562</td>
+		<td>22.00 น.</td>
+		<td>0.94</td>
+		<td>2.10</td>
+		</tr>
+			
+		<tr>
+		<td>08 กรกฎาคม 2562</td>
+		<td>23.00 น.</td>
+		<td>0.93</td>
+		<td>1.95</td>
+		</tr>
+			
+		<tr>
+		<td>08 กรกฎาคม 2562</td>
+		<td>24.00 น.</td>
+		<td>0.93</td>
+		<td>1.95</td>
+		</tr>
+								
+		<tr>
+		<td>09 กรกฎาคม 2562</td>
+		<td>01.00 น.</td>
+		<td>0.93</td>
+		<td>1.95</td>
+		</tr>
+			
+		<tr>
+		<td>09 กรกฎาคม 2562</td>
+		<td>02.00 น.</td>
+		<td>0.93</td>
+		<td>1.95</td>
+		</tr>
+			
+		<tr>
+		<td>09 กรกฎาคม 2562</td>
+		<td>03.00 น.</td>
+		<td>0.93</td>
+		<td>1.95</td>
+		</tr>
+			
+		<tr>
+		<td>09 กรกฎาคม 2562</td>
+		<td>04.00 น.</td>
+		<td>0.94</td>
+		<td>2.10</td>
+		</tr>
+			
+		<tr>
+		<td>09 กรกฎาคม 2562</td>
+		<td>05.00 น.</td>
+		<td>0.94</td>
+		<td>2.10</td>
+		</tr>
+			
+		<tr>
+		<td>09 กรกฎาคม 2562</td>
+		<td>06.00 น.</td>
+		<td>0.94</td>
+		<td>2.10</td>
+		</tr>
+			
+		<tr>
+		<td>09 กรกฎาคม 2562</td>
+		<td>07.00 น.</td>
+		<td>0.94</td>
+		<td>2.10</td>
+		</tr>
+			
+		<tr>
+		<td>09 กรกฎาคม 2562</td>
+		<td>08.00 น.</td>
+		<td>0.94</td>
+		<td>2.10</td>
+		</tr>
+			
+		<tr>
+		<td>09 กรกฎาคม 2562</td>
+		<td>09.00 น.</td>
+		<td>0.93</td>
+		<td>1.95</td>
+		</tr>
+			
+		<tr>
+		<td>09 กรกฎาคม 2562</td>
+		<td>10.00 น.</td>
+		<td>0.93</td>
+		<td>1.95</td>
+		</tr>
+			
+		<tr>
+		<td>09 กรกฎาคม 2562</td>
+		<td>11.00 น.</td>
+		<td>0.93</td>
+		<td>1.95</td>
+		</tr>
+			
+		<tr>
+		<td>09 กรกฎาคม 2562</td>
+		<td>12.00 น.</td>
+		<td>0.93</td>
+		<td>1.95</td>
+		</tr>
+			
+		<tr>
+		<td>09 กรกฎาคม 2562</td>
+		<td>13.00 น.</td>
+		<td>0.93</td>
+		<td>1.95</td>
+		</tr>
+			
+		<tr>
+		<td>09 กรกฎาคม 2562</td>
+		<td>14.00 น.</td>
+		<td>0.93</td>
+		<td>1.95</td>
+		</tr>
+			
+		<tr>
+		<td>09 กรกฎาคม 2562</td>
+		<td>15.00 น.</td>
+		<td>0.93</td>
+		<td>1.95</td>
+		</tr>
+			
+		<tr>
+		<td>09 กรกฎาคม 2562</td>
+		<td>16.00 น.</td>
+		<td>0.94</td>
+		<td>2.10</td>
+		</tr>
+			
+		<tr>
+		<td>09 กรกฎาคม 2562</td>
+		<td>17.00 น.</td>
+		<td>0.94</td>
+		<td>2.10</td>
+		</tr>
+			
+		<tr>
+		<td>09 กรกฎาคม 2562</td>
+		<td>18.00 น.</td>
+		<td>0.94</td>
+		<td>2.10</td>
+		</tr>
+			
+		<tr>
+		<td>09 กรกฎาคม 2562</td>
+		<td>19.00 น.</td>
+		<td>0.94</td>
+		<td>2.10</td>
+		</tr>
+			
+		<tr>
+		<td>09 กรกฎาคม 2562</td>
+		<td>20.00 น.</td>
+		<td>0.94</td>
+		<td>2.10</td>
+		</tr>
+			
+		<tr>
+		<td>09 กรกฎาคม 2562</td>
+		<td>21.00 น.</td>
+		<td>0.94</td>
+		<td>2.10</td>
+		</tr>
+			
+		<tr>
+		<td>09 กรกฎาคม 2562</td>
+		<td>22.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>09 กรกฎาคม 2562</td>
+		<td>23.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>09 กรกฎาคม 2562</td>
+		<td>24.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+								
+		<tr>
+		<td>10 กรกฎาคม 2562</td>
+		<td>01.00 น.</td>
+		<td>0.96</td>
+		<td>2.40</td>
+		</tr>
+			
+		<tr>
+		<td>10 กรกฎาคม 2562</td>
+		<td>02.00 น.</td>
+		<td>0.96</td>
+		<td>2.40</td>
+		</tr>
+			
+		<tr>
+		<td>10 กรกฎาคม 2562</td>
+		<td>03.00 น.</td>
+		<td>0.96</td>
+		<td>2.40</td>
+		</tr>
+			
+		<tr>
+		<td>10 กรกฎาคม 2562</td>
+		<td>04.00 น.</td>
+		<td>0.97</td>
+		<td>2.55</td>
+		</tr>
+			
+		<tr>
+		<td>10 กรกฎาคม 2562</td>
+		<td>05.00 น.</td>
+		<td>0.97</td>
+		<td>2.55</td>
+		</tr>
+			
+		<tr>
+		<td>10 กรกฎาคม 2562</td>
+		<td>06.00 น.</td>
+		<td>0.97</td>
+		<td>2.55</td>
+		</tr>
+			
+		<tr>
+		<td>10 กรกฎาคม 2562</td>
+		<td>07.00 น.</td>
+		<td>0.97</td>
+		<td>2.55</td>
+		</tr>
+			
+		<tr>
+		<td>10 กรกฎาคม 2562</td>
+		<td>08.00 น.</td>
+		<td>0.97</td>
+		<td>2.55</td>
+		</tr>
+			
+		<tr>
+		<td>10 กรกฎาคม 2562</td>
+		<td>09.00 น.</td>
+		<td>0.97</td>
+		<td>2.55</td>
+		</tr>
+			
+		<tr>
+		<td>10 กรกฎาคม 2562</td>
+		<td>10.00 น.</td>
+		<td>0.97</td>
+		<td>2.55</td>
+		</tr>
+			
+		<tr>
+		<td>10 กรกฎาคม 2562</td>
+		<td>11.00 น.</td>
+		<td>0.97</td>
+		<td>2.55</td>
+		</tr>
+			
+		<tr>
+		<td>10 กรกฎาคม 2562</td>
+		<td>12.00 น.</td>
+		<td>0.97</td>
+		<td>2.55</td>
+		</tr>
+			
+		<tr>
+		<td>10 กรกฎาคม 2562</td>
+		<td>13.00 น.</td>
+		<td>0.97</td>
+		<td>2.55</td>
+		</tr>
+			
+		<tr>
+		<td>10 กรกฎาคม 2562</td>
+		<td>14.00 น.</td>
+		<td>0.97</td>
+		<td>2.55</td>
+		</tr>
+			
+		<tr>
+		<td>10 กรกฎาคม 2562</td>
+		<td>15.00 น.</td>
+		<td>0.97</td>
+		<td>2.55</td>
+		</tr>
+			
+		<tr>
+		<td>10 กรกฎาคม 2562</td>
+		<td>16.00 น.</td>
+		<td>0.97</td>
+		<td>2.55</td>
+		</tr>
+			
+		<tr>
+		<td>10 กรกฎาคม 2562</td>
+		<td>17.00 น.</td>
+		<td>0.97</td>
+		<td>2.55</td>
+		</tr>
+			
+		<tr>
+		<td>10 กรกฎาคม 2562</td>
+		<td>18.00 น.</td>
+		<td>0.97</td>
+		<td>2.55</td>
+		</tr>
+			
+		<tr>
+		<td>10 กรกฎาคม 2562</td>
+		<td>19.00 น.</td>
+		<td>0.97</td>
+		<td>2.55</td>
+		</tr>
+			
+		<tr>
+		<td>10 กรกฎาคม 2562</td>
+		<td>20.00 น.</td>
+		<td>0.97</td>
+		<td>2.55</td>
+		</tr>
+			
+		<tr>
+		<td>10 กรกฎาคม 2562</td>
+		<td>21.00 น.</td>
+		<td>0.97</td>
+		<td>2.55</td>
+		</tr>
+			
+		<tr>
+		<td>10 กรกฎาคม 2562</td>
+		<td>22.00 น.</td>
+		<td>0.97</td>
+		<td>2.55</td>
+		</tr>
+			
+		<tr>
+		<td>10 กรกฎาคม 2562</td>
+		<td>23.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>10 กรกฎาคม 2562</td>
+		<td>24.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+								
+		<tr>
+		<td>11 กรกฎาคม 2562</td>
+		<td>01.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>11 กรกฎาคม 2562</td>
+		<td>02.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>11 กรกฎาคม 2562</td>
+		<td>03.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>11 กรกฎาคม 2562</td>
+		<td>04.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>11 กรกฎาคม 2562</td>
+		<td>05.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>11 กรกฎาคม 2562</td>
+		<td>06.00 น.</td>
+		<td>1.01</td>
+		<td>3.40</td>
+		</tr>
+			
+		<tr>
+		<td>11 กรกฎาคม 2562</td>
+		<td>07.00 น.</td>
+		<td>1.01</td>
+		<td>3.40</td>
+		</tr>
+			
+		<tr>
+		<td>11 กรกฎาคม 2562</td>
+		<td>08.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>11 กรกฎาคม 2562</td>
+		<td>09.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>11 กรกฎาคม 2562</td>
+		<td>10.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>11 กรกฎาคม 2562</td>
+		<td>11.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>11 กรกฎาคม 2562</td>
+		<td>12.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>11 กรกฎาคม 2562</td>
+		<td>13.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>11 กรกฎาคม 2562</td>
+		<td>14.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>11 กรกฎาคม 2562</td>
+		<td>15.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>11 กรกฎาคม 2562</td>
+		<td>16.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>11 กรกฎาคม 2562</td>
+		<td>17.00 น.</td>
+		<td>0.97</td>
+		<td>2.55</td>
+		</tr>
+			
+		<tr>
+		<td>11 กรกฎาคม 2562</td>
+		<td>18.00 น.</td>
+		<td>0.97</td>
+		<td>2.55</td>
+		</tr>
+			
+		<tr>
+		<td>11 กรกฎาคม 2562</td>
+		<td>19.00 น.</td>
+		<td>0.97</td>
+		<td>2.55</td>
+		</tr>
+			
+		<tr>
+		<td>11 กรกฎาคม 2562</td>
+		<td>20.00 น.</td>
+		<td>0.97</td>
+		<td>2.55</td>
+		</tr>
+			
+		<tr>
+		<td>11 กรกฎาคม 2562</td>
+		<td>21.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>11 กรกฎาคม 2562</td>
+		<td>22.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>11 กรกฎาคม 2562</td>
+		<td>23.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>11 กรกฎาคม 2562</td>
+		<td>24.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+								
+		<tr>
+		<td>12 กรกฎาคม 2562</td>
+		<td>01.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>12 กรกฎาคม 2562</td>
+		<td>02.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>12 กรกฎาคม 2562</td>
+		<td>03.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>12 กรกฎาคม 2562</td>
+		<td>04.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>12 กรกฎาคม 2562</td>
+		<td>05.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>12 กรกฎาคม 2562</td>
+		<td>06.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>12 กรกฎาคม 2562</td>
+		<td>07.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>12 กรกฎาคม 2562</td>
+		<td>08.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>12 กรกฎาคม 2562</td>
+		<td>09.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>12 กรกฎาคม 2562</td>
+		<td>10.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>12 กรกฎาคม 2562</td>
+		<td>11.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>12 กรกฎาคม 2562</td>
+		<td>12.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>12 กรกฎาคม 2562</td>
+		<td>13.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>12 กรกฎาคม 2562</td>
+		<td>14.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>12 กรกฎาคม 2562</td>
+		<td>15.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>12 กรกฎาคม 2562</td>
+		<td>16.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>12 กรกฎาคม 2562</td>
+		<td>17.00 น.</td>
+		<td>1.01</td>
+		<td>3.40</td>
+		</tr>
+			
+		<tr>
+		<td>12 กรกฎาคม 2562</td>
+		<td>18.00 น.</td>
+		<td>1.03</td>
+		<td>4.20</td>
+		</tr>
+			
+		<tr>
+		<td>12 กรกฎาคม 2562</td>
+		<td>19.00 น.</td>
+		<td>1.05</td>
+		<td>5.00</td>
+		</tr>
+			
+		<tr>
+		<td>12 กรกฎาคม 2562</td>
+		<td>20.00 น.</td>
+		<td>1.07</td>
+		<td>5.80</td>
+		</tr>
+			
+		<tr>
+		<td>12 กรกฎาคม 2562</td>
+		<td>21.00 น.</td>
+		<td>1.08</td>
+		<td>6.20</td>
+		</tr>
+			
+		<tr>
+		<td>12 กรกฎาคม 2562</td>
+		<td>22.00 น.</td>
+		<td>1.09</td>
+		<td>6.60</td>
+		</tr>
+			
+		<tr>
+		<td>12 กรกฎาคม 2562</td>
+		<td>23.00 น.</td>
+		<td>1.10</td>
+		<td>7.00</td>
+		</tr>
+			
+		<tr>
+		<td>12 กรกฎาคม 2562</td>
+		<td>24.00 น.</td>
+		<td>1.11</td>
+		<td>7.40</td>
+		</tr>
+								
+		<tr>
+		<td>13 กรกฎาคม 2562</td>
+		<td>01.00 น.</td>
+		<td>1.11</td>
+		<td>7.40</td>
+		</tr>
+			
+		<tr>
+		<td>13 กรกฎาคม 2562</td>
+		<td>02.00 น.</td>
+		<td>1.12</td>
+		<td>7.80</td>
+		</tr>
+			
+		<tr>
+		<td>13 กรกฎาคม 2562</td>
+		<td>03.00 น.</td>
+		<td>1.12</td>
+		<td>7.80</td>
+		</tr>
+			
+		<tr>
+		<td>13 กรกฎาคม 2562</td>
+		<td>04.00 น.</td>
+		<td>1.13</td>
+		<td>8.20</td>
+		</tr>
+			
+		<tr>
+		<td>13 กรกฎาคม 2562</td>
+		<td>05.00 น.</td>
+		<td>1.13</td>
+		<td>8.20</td>
+		</tr>
+			
+		<tr>
+		<td>13 กรกฎาคม 2562</td>
+		<td>06.00 น.</td>
+		<td>1.14</td>
+		<td>8.60</td>
+		</tr>
+			
+		<tr>
+		<td>13 กรกฎาคม 2562</td>
+		<td>07.00 น.</td>
+		<td>1.14</td>
+		<td>8.60</td>
+		</tr>
+			
+		<tr>
+		<td>13 กรกฎาคม 2562</td>
+		<td>08.00 น.</td>
+		<td>1.14</td>
+		<td>8.60</td>
+		</tr>
+			
+		<tr>
+		<td>13 กรกฎาคม 2562</td>
+		<td>09.00 น.</td>
+		<td>1.14</td>
+		<td>8.60</td>
+		</tr>
+			
+		<tr>
+		<td>13 กรกฎาคม 2562</td>
+		<td>10.00 น.</td>
+		<td>1.14</td>
+		<td>8.60</td>
+		</tr>
+			
+		<tr>
+		<td>13 กรกฎาคม 2562</td>
+		<td>11.00 น.</td>
+		<td>1.14</td>
+		<td>8.60</td>
+		</tr>
+			
+		<tr>
+		<td>13 กรกฎาคม 2562</td>
+		<td>12.00 น.</td>
+		<td>1.15</td>
+		<td>9.00</td>
+		</tr>
+			
+		<tr>
+		<td>13 กรกฎาคม 2562</td>
+		<td>13.00 น.</td>
+		<td>1.15</td>
+		<td>9.00</td>
+		</tr>
+			
+		<tr>
+		<td>13 กรกฎาคม 2562</td>
+		<td>14.00 น.</td>
+		<td>1.15</td>
+		<td>9.00</td>
+		</tr>
+			
+		<tr>
+		<td>13 กรกฎาคม 2562</td>
+		<td>15.00 น.</td>
+		<td>1.14</td>
+		<td>8.60</td>
+		</tr>
+			
+		<tr>
+		<td>13 กรกฎาคม 2562</td>
+		<td>16.00 น.</td>
+		<td>1.14</td>
+		<td>8.60</td>
+		</tr>
+			
+		<tr>
+		<td>13 กรกฎาคม 2562</td>
+		<td>17.00 น.</td>
+		<td>1.14</td>
+		<td>8.60</td>
+		</tr>
+			
+		<tr>
+		<td>13 กรกฎาคม 2562</td>
+		<td>18.00 น.</td>
+		<td>1.14</td>
+		<td>8.60</td>
+		</tr>
+			
+		<tr>
+		<td>13 กรกฎาคม 2562</td>
+		<td>19.00 น.</td>
+		<td>1.13</td>
+		<td>8.20</td>
+		</tr>
+			
+		<tr>
+		<td>13 กรกฎาคม 2562</td>
+		<td>20.00 น.</td>
+		<td>1.14</td>
+		<td>8.60</td>
+		</tr>
+			
+		<tr>
+		<td>13 กรกฎาคม 2562</td>
+		<td>21.00 น.</td>
+		<td>1.14</td>
+		<td>8.60</td>
+		</tr>
+			
+		<tr>
+		<td>13 กรกฎาคม 2562</td>
+		<td>22.00 น.</td>
+		<td>1.14</td>
+		<td>8.60</td>
+		</tr>
+			
+		<tr>
+		<td>13 กรกฎาคม 2562</td>
+		<td>23.00 น.</td>
+		<td>1.14</td>
+		<td>8.60</td>
+		</tr>
+			
+		<tr>
+		<td>13 กรกฎาคม 2562</td>
+		<td>24.00 น.</td>
+		<td>1.14</td>
+		<td>8.60</td>
+		</tr>
+								
+		<tr>
+		<td>14 กรกฎาคม 2562</td>
+		<td>01.00 น.</td>
+		<td>1.14</td>
+		<td>8.60</td>
+		</tr>
+			
+		<tr>
+		<td>14 กรกฎาคม 2562</td>
+		<td>02.00 น.</td>
+		<td>1.14</td>
+		<td>8.60</td>
+		</tr>
+			
+		<tr>
+		<td>14 กรกฎาคม 2562</td>
+		<td>03.00 น.</td>
+		<td>1.14</td>
+		<td>8.60</td>
+		</tr>
+			
+		<tr>
+		<td>14 กรกฎาคม 2562</td>
+		<td>04.00 น.</td>
+		<td>1.14</td>
+		<td>8.60</td>
+		</tr>
+			
+		<tr>
+		<td>14 กรกฎาคม 2562</td>
+		<td>05.00 น.</td>
+		<td>1.14</td>
+		<td>8.60</td>
+		</tr>
+			
+		<tr>
+		<td>14 กรกฎาคม 2562</td>
+		<td>06.00 น.</td>
+		<td>1.14</td>
+		<td>8.60</td>
+		</tr>
+			
+		<tr>
+		<td>14 กรกฎาคม 2562</td>
+		<td>07.00 น.</td>
+		<td>1.13</td>
+		<td>8.20</td>
+		</tr>
+			
+		<tr>
+		<td>14 กรกฎาคม 2562</td>
+		<td>08.00 น.</td>
+		<td>1.13</td>
+		<td>8.20</td>
+		</tr>
+			
+		<tr>
+		<td>14 กรกฎาคม 2562</td>
+		<td>09.00 น.</td>
+		<td>1.13</td>
+		<td>8.20</td>
+		</tr>
+			
+		<tr>
+		<td>14 กรกฎาคม 2562</td>
+		<td>10.00 น.</td>
+		<td>1.13</td>
+		<td>8.20</td>
+		</tr>
+			
+		<tr>
+		<td>14 กรกฎาคม 2562</td>
+		<td>11.00 น.</td>
+		<td>1.13</td>
+		<td>8.20</td>
+		</tr>
+			
+		<tr>
+		<td>14 กรกฎาคม 2562</td>
+		<td>12.00 น.</td>
+		<td>1.13</td>
+		<td>8.20</td>
+		</tr>
+			
+		<tr>
+		<td>14 กรกฎาคม 2562</td>
+		<td>13.00 น.</td>
+		<td>1.13</td>
+		<td>8.20</td>
+		</tr>
+			
+		<tr>
+		<td>14 กรกฎาคม 2562</td>
+		<td>14.00 น.</td>
+		<td>1.14</td>
+		<td>8.60</td>
+		</tr>
+			
+		<tr>
+		<td>14 กรกฎาคม 2562</td>
+		<td>15.00 น.</td>
+		<td>1.15</td>
+		<td>9.00</td>
+		</tr>
+			
+		<tr>
+		<td>14 กรกฎาคม 2562</td>
+		<td>16.00 น.</td>
+		<td>1.15</td>
+		<td>9.00</td>
+		</tr>
+			
+		<tr>
+		<td>14 กรกฎาคม 2562</td>
+		<td>17.00 น.</td>
+		<td>1.15</td>
+		<td>9.00</td>
+		</tr>
+			
+		<tr>
+		<td>14 กรกฎาคม 2562</td>
+		<td>18.00 น.</td>
+		<td>1.16</td>
+		<td>9.40</td>
+		</tr>
+			
+		<tr>
+		<td>14 กรกฎาคม 2562</td>
+		<td>19.00 น.</td>
+		<td>1.16</td>
+		<td>9.40</td>
+		</tr>
+			
+		<tr>
+		<td>14 กรกฎาคม 2562</td>
+		<td>20.00 น.</td>
+		<td>1.16</td>
+		<td>9.40</td>
+		</tr>
+			
+		<tr>
+		<td>14 กรกฎาคม 2562</td>
+		<td>21.00 น.</td>
+		<td>1.17</td>
+		<td>9.80</td>
+		</tr>
+			
+		<tr>
+		<td>14 กรกฎาคม 2562</td>
+		<td>22.00 น.</td>
+		<td>1.17</td>
+		<td>9.80</td>
+		</tr>
+			
+		<tr>
+		<td>14 กรกฎาคม 2562</td>
+		<td>23.00 น.</td>
+		<td>1.17</td>
+		<td>9.80</td>
+		</tr>
+			
+		<tr>
+		<td>14 กรกฎาคม 2562</td>
+		<td>24.00 น.</td>
+		<td>1.17</td>
+		<td>9.80</td>
+		</tr>
+								
+		<tr>
+		<td>15 กรกฎาคม 2562</td>
+		<td>01.00 น.</td>
+		<td>1.17</td>
+		<td>9.80</td>
+		</tr>
+			
+		<tr>
+		<td>15 กรกฎาคม 2562</td>
+		<td>02.00 น.</td>
+		<td>1.17</td>
+		<td>9.80</td>
+		</tr>
+			
+		<tr>
+		<td>15 กรกฎาคม 2562</td>
+		<td>03.00 น.</td>
+		<td>1.16</td>
+		<td>9.40</td>
+		</tr>
+			
+		<tr>
+		<td>15 กรกฎาคม 2562</td>
+		<td>04.00 น.</td>
+		<td>1.16</td>
+		<td>9.40</td>
+		</tr>
+			
+		<tr>
+		<td>15 กรกฎาคม 2562</td>
+		<td>05.00 น.</td>
+		<td>1.15</td>
+		<td>9.00</td>
+		</tr>
+			
+		<tr>
+		<td>15 กรกฎาคม 2562</td>
+		<td>06.00 น.</td>
+		<td>1.15</td>
+		<td>9.00</td>
+		</tr>
+			
+		<tr>
+		<td>15 กรกฎาคม 2562</td>
+		<td>07.00 น.</td>
+		<td>1.14</td>
+		<td>9.00</td>
+		</tr>
+			
+		<tr>
+		<td>15 กรกฎาคม 2562</td>
+		<td>08.00 น.</td>
+		<td>1.14</td>
+		<td>8.60</td>
+		</tr>
+			
+		<tr>
+		<td>15 กรกฎาคม 2562</td>
+		<td>09.00 น.</td>
+		<td>1.13</td>
+		<td>8.20</td>
+		</tr>
+			
+		<tr>
+		<td>15 กรกฎาคม 2562</td>
+		<td>10.00 น.</td>
+		<td>1.12</td>
+		<td>7.80</td>
+		</tr>
+			
+		<tr>
+		<td>15 กรกฎาคม 2562</td>
+		<td>11.00 น.</td>
+		<td>1.11</td>
+		<td>7.40</td>
+		</tr>
+			
+		<tr>
+		<td>15 กรกฎาคม 2562</td>
+		<td>12.00 น.</td>
+		<td>1.10</td>
+		<td>7.00</td>
+		</tr>
+			
+		<tr>
+		<td>15 กรกฎาคม 2562</td>
+		<td>13.00 น.</td>
+		<td>1.10</td>
+		<td>7.00</td>
+		</tr>
+			
+		<tr>
+		<td>15 กรกฎาคม 2562</td>
+		<td>14.00 น.</td>
+		<td>1.09</td>
+		<td>6.60</td>
+		</tr>
+			
+		<tr>
+		<td>15 กรกฎาคม 2562</td>
+		<td>15.00 น.</td>
+		<td>1.08</td>
+		<td>6.20</td>
+		</tr>
+			
+		<tr>
+		<td>15 กรกฎาคม 2562</td>
+		<td>16.00 น.</td>
+		<td>1.07</td>
+		<td>5.80</td>
+		</tr>
+			
+		<tr>
+		<td>15 กรกฎาคม 2562</td>
+		<td>17.00 น.</td>
+		<td>1.06</td>
+		<td>5.40</td>
+		</tr>
+			
+		<tr>
+		<td>15 กรกฎาคม 2562</td>
+		<td>18.00 น.</td>
+		<td>1.05</td>
+		<td>5.00</td>
+		</tr>
+			
+		<tr>
+		<td>15 กรกฎาคม 2562</td>
+		<td>19.00 น.</td>
+		<td>1.04</td>
+		<td>4.60</td>
+		</tr>
+			
+		<tr>
+		<td>15 กรกฎาคม 2562</td>
+		<td>20.00 น.</td>
+		<td>1.03</td>
+		<td>4.20</td>
+		</tr>
+			
+		<tr>
+		<td>15 กรกฎาคม 2562</td>
+		<td>21.00 น.</td>
+		<td>1.02</td>
+		<td>3.80</td>
+		</tr>
+			
+		<tr>
+		<td>15 กรกฎาคม 2562</td>
+		<td>22.00 น.</td>
+		<td>1.01</td>
+		<td>3.40</td>
+		</tr>
+			
+		<tr>
+		<td>15 กรกฎาคม 2562</td>
+		<td>23.00 น.</td>
+		<td>1.01</td>
+		<td>3.40</td>
+		</tr>
+			
+		<tr>
+		<td>15 กรกฎาคม 2562</td>
+		<td>24.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+								
+		<tr>
+		<td>16 กรกฎาคม 2562</td>
+		<td>01.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>16 กรกฎาคม 2562</td>
+		<td>02.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>16 กรกฎาคม 2562</td>
+		<td>03.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>16 กรกฎาคม 2562</td>
+		<td>04.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>16 กรกฎาคม 2562</td>
+		<td>05.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>16 กรกฎาคม 2562</td>
+		<td>06.00 น.</td>
+		<td>0.97</td>
+		<td>2.55</td>
+		</tr>
+			
+		<tr>
+		<td>16 กรกฎาคม 2562</td>
+		<td>07.00 น.</td>
+		<td>0.97</td>
+		<td>2.55</td>
+		</tr>
+			
+		<tr>
+		<td>16 กรกฎาคม 2562</td>
+		<td>08.00 น.</td>
+		<td>0.96</td>
+		<td>2.40</td>
+		</tr>
+			
+		<tr>
+		<td>16 กรกฎาคม 2562</td>
+		<td>09.00 น.</td>
+		<td>0.96</td>
+		<td>2.40</td>
+		</tr>
+			
+		<tr>
+		<td>16 กรกฎาคม 2562</td>
+		<td>10.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>16 กรกฎาคม 2562</td>
+		<td>11.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>16 กรกฎาคม 2562</td>
+		<td>12.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>16 กรกฎาคม 2562</td>
+		<td>13.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>16 กรกฎาคม 2562</td>
+		<td>14.00 น.</td>
+		<td>0.94</td>
+		<td>2.10</td>
+		</tr>
+			
+		<tr>
+		<td>16 กรกฎาคม 2562</td>
+		<td>15.00 น.</td>
+		<td>0.93</td>
+		<td>1.95</td>
+		</tr>
+			
+		<tr>
+		<td>16 กรกฎาคม 2562</td>
+		<td>16.00 น.</td>
+		<td>0.93</td>
+		<td>1.95</td>
+		</tr>
+			
+		<tr>
+		<td>16 กรกฎาคม 2562</td>
+		<td>17.00 น.</td>
+		<td>0.93</td>
+		<td>1.95</td>
+		</tr>
+			
+		<tr>
+		<td>16 กรกฎาคม 2562</td>
+		<td>18.00 น.</td>
+		<td>0.92</td>
+		<td>1.80</td>
+		</tr>
+			
+		<tr>
+		<td>16 กรกฎาคม 2562</td>
+		<td>19.00 น.</td>
+		<td>0.92</td>
+		<td>1.80</td>
+		</tr>
+			
+		<tr>
+		<td>16 กรกฎาคม 2562</td>
+		<td>20.00 น.</td>
+		<td>0.91</td>
+		<td>1.65</td>
+		</tr>
+			
+		<tr>
+		<td>16 กรกฎาคม 2562</td>
+		<td>21.00 น.</td>
+		<td>0.91</td>
+		<td>1.65</td>
+		</tr>
+			
+		<tr>
+		<td>16 กรกฎาคม 2562</td>
+		<td>22.00 น.</td>
+		<td>0.91</td>
+		<td>1.65</td>
+		</tr>
+			
+		<tr>
+		<td>16 กรกฎาคม 2562</td>
+		<td>23.00 น.</td>
+		<td>0.90</td>
+		<td>1.50</td>
+		</tr>
+			
+		<tr>
+		<td>16 กรกฎาคม 2562</td>
+		<td>24.00 น.</td>
+		<td>0.90</td>
+		<td>1.50</td>
+		</tr>
+								
+		<tr>
+		<td>17 กรกฎาคม 2562</td>
+		<td>01.00 น.</td>
+		<td>0.90</td>
+		<td>1.50</td>
+		</tr>
+			
+		<tr>
+		<td>17 กรกฎาคม 2562</td>
+		<td>02.00 น.</td>
+		<td>0.91</td>
+		<td>1.65</td>
+		</tr>
+			
+		<tr>
+		<td>17 กรกฎาคม 2562</td>
+		<td>03.00 น.</td>
+		<td>0.91</td>
+		<td>1.65</td>
+		</tr>
+			
+		<tr>
+		<td>17 กรกฎาคม 2562</td>
+		<td>04.00 น.</td>
+		<td>0.91</td>
+		<td>1.65</td>
+		</tr>
+			
+		<tr>
+		<td>17 กรกฎาคม 2562</td>
+		<td>05.00 น.</td>
+		<td>0.91</td>
+		<td>1.65</td>
+		</tr>
+			
+		<tr>
+		<td>17 กรกฎาคม 2562</td>
+		<td>06.00 น.</td>
+		<td>0.90</td>
+		<td>1.50</td>
+		</tr>
+			
+		<tr>
+		<td>17 กรกฎาคม 2562</td>
+		<td>07.00 น.</td>
+		<td>0.90</td>
+		<td>1.50</td>
+		</tr>
+			
+		<tr>
+		<td>17 กรกฎาคม 2562</td>
+		<td>08.00 น.</td>
+		<td>0.89</td>
+		<td>1.40</td>
+		</tr>
+			
+		<tr>
+		<td>17 กรกฎาคม 2562</td>
+		<td>09.00 น.</td>
+		<td>0.90</td>
+		<td>1.50</td>
+		</tr>
+			
+		<tr>
+		<td>17 กรกฎาคม 2562</td>
+		<td>10.00 น.</td>
+		<td>0.89</td>
+		<td>1.40</td>
+		</tr>
+			
+		<tr>
+		<td>17 กรกฎาคม 2562</td>
+		<td>11.00 น.</td>
+		<td>0.89</td>
+		<td>1.40</td>
+		</tr>
+			
+		<tr>
+		<td>17 กรกฎาคม 2562</td>
+		<td>12.00 น.</td>
+		<td>0.89</td>
+		<td>1.40</td>
+		</tr>
+			
+		<tr>
+		<td>17 กรกฎาคม 2562</td>
+		<td>13.00 น.</td>
+		<td>0.89</td>
+		<td>1.40</td>
+		</tr>
+			
+		<tr>
+		<td>17 กรกฎาคม 2562</td>
+		<td>14.00 น.</td>
+		<td>0.88</td>
+		<td>1.30</td>
+		</tr>
+			
+		<tr>
+		<td>17 กรกฎาคม 2562</td>
+		<td>15.00 น.</td>
+		<td>0.88</td>
+		<td>1.30</td>
+		</tr>
+			
+		<tr>
+		<td>17 กรกฎาคม 2562</td>
+		<td>16.00 น.</td>
+		<td>0.88</td>
+		<td>1.30</td>
+		</tr>
+			
+		<tr>
+		<td>17 กรกฎาคม 2562</td>
+		<td>17.00 น.</td>
+		<td>0.88</td>
+		<td>1.30</td>
+		</tr>
+			
+		<tr>
+		<td>17 กรกฎาคม 2562</td>
+		<td>18.00 น.</td>
+		<td>0.88</td>
+		<td>1.30</td>
+		</tr>
+			
+		<tr>
+		<td>17 กรกฎาคม 2562</td>
+		<td>19.00 น.</td>
+		<td>0.88</td>
+		<td>1.30</td>
+		</tr>
+			
+		<tr>
+		<td>17 กรกฎาคม 2562</td>
+		<td>20.00 น.</td>
+		<td>0.88</td>
+		<td>1.30</td>
+		</tr>
+			
+		<tr>
+		<td>17 กรกฎาคม 2562</td>
+		<td>21.00 น.</td>
+		<td>0.88</td>
+		<td>1.30</td>
+		</tr>
+			
+		<tr>
+		<td>17 กรกฎาคม 2562</td>
+		<td>22.00 น.</td>
+		<td>0.88</td>
+		<td>1.30</td>
+		</tr>
+			
+		<tr>
+		<td>17 กรกฎาคม 2562</td>
+		<td>23.00 น.</td>
+		<td>0.88</td>
+		<td>1.30</td>
+		</tr>
+			
+		<tr>
+		<td>17 กรกฎาคม 2562</td>
+		<td>24.00 น.</td>
+		<td>0.88</td>
+		<td>1.30</td>
+		</tr>
+								
+		<tr>
+		<td>18 กรกฎาคม 2562</td>
+		<td>01.00 น.</td>
+		<td>0.88</td>
+		<td>1.30</td>
+		</tr>
+			
+		<tr>
+		<td>18 กรกฎาคม 2562</td>
+		<td>02.00 น.</td>
+		<td>0.88</td>
+		<td>1.30</td>
+		</tr>
+			
+		<tr>
+		<td>18 กรกฎาคม 2562</td>
+		<td>03.00 น.</td>
+		<td>0.89</td>
+		<td>1.40</td>
+		</tr>
+			
+		<tr>
+		<td>18 กรกฎาคม 2562</td>
+		<td>04.00 น.</td>
+		<td>0.89</td>
+		<td>1.40</td>
+		</tr>
+			
+		<tr>
+		<td>18 กรกฎาคม 2562</td>
+		<td>05.00 น.</td>
+		<td>0.90</td>
+		<td>1.50</td>
+		</tr>
+			
+		<tr>
+		<td>18 กรกฎาคม 2562</td>
+		<td>06.00 น.</td>
+		<td>0.90</td>
+		<td>1.50</td>
+		</tr>
+			
+		<tr>
+		<td>18 กรกฎาคม 2562</td>
+		<td>07.00 น.</td>
+		<td>0.90</td>
+		<td>1.50</td>
+		</tr>
+			
+		<tr>
+		<td>18 กรกฎาคม 2562</td>
+		<td>08.00 น.</td>
+		<td>0.90</td>
+		<td>1.50</td>
+		</tr>
+			
+		<tr>
+		<td>18 กรกฎาคม 2562</td>
+		<td>09.00 น.</td>
+		<td>0.90</td>
+		<td>1.50</td>
+		</tr>
+			
+		<tr>
+		<td>18 กรกฎาคม 2562</td>
+		<td>10.00 น.</td>
+		<td>0.90</td>
+		<td>1.50</td>
+		</tr>
+			
+		<tr>
+		<td>18 กรกฎาคม 2562</td>
+		<td>11.00 น.</td>
+		<td>0.90</td>
+		<td>1.50</td>
+		</tr>
+			
+		<tr>
+		<td>18 กรกฎาคม 2562</td>
+		<td>12.00 น.</td>
+		<td>0.90</td>
+		<td>1.50</td>
+		</tr>
+			
+		<tr>
+		<td>18 กรกฎาคม 2562</td>
+		<td>13.00 น.</td>
+		<td>0.89</td>
+		<td>1.40</td>
+		</tr>
+			
+		<tr>
+		<td>18 กรกฎาคม 2562</td>
+		<td>14.00 น.</td>
+		<td>0.89</td>
+		<td>1.40</td>
+		</tr>
+			
+		<tr>
+		<td>18 กรกฎาคม 2562</td>
+		<td>15.00 น.</td>
+		<td>0.89</td>
+		<td>1.40</td>
+		</tr>
+			
+		<tr>
+		<td>18 กรกฎาคม 2562</td>
+		<td>16.00 น.</td>
+		<td>0.89</td>
+		<td>1.40</td>
+		</tr>
+			
+		<tr>
+		<td>18 กรกฎาคม 2562</td>
+		<td>17.00 น.</td>
+		<td>0.89</td>
+		<td>1.40</td>
+		</tr>
+			
+		<tr>
+		<td>18 กรกฎาคม 2562</td>
+		<td>18.00 น.</td>
+		<td>0.89</td>
+		<td>1.40</td>
+		</tr>
+			
+		<tr>
+		<td>18 กรกฎาคม 2562</td>
+		<td>19.00 น.</td>
+		<td>0.89</td>
+		<td>1.40</td>
+		</tr>
+			
+		<tr>
+		<td>18 กรกฎาคม 2562</td>
+		<td>20.00 น.</td>
+		<td>0.89</td>
+		<td>1.40</td>
+		</tr>
+			
+		<tr>
+		<td>18 กรกฎาคม 2562</td>
+		<td>21.00 น.</td>
+		<td>0.89</td>
+		<td>1.40</td>
+		</tr>
+			
+		<tr>
+		<td>18 กรกฎาคม 2562</td>
+		<td>22.00 น.</td>
+		<td>0.89</td>
+		<td>1.40</td>
+		</tr>
+			
+		<tr>
+		<td>18 กรกฎาคม 2562</td>
+		<td>23.00 น.</td>
+		<td>0.89</td>
+		<td>1.40</td>
+		</tr>
+			
+		<tr>
+		<td>18 กรกฎาคม 2562</td>
+		<td>24.00 น.</td>
+		<td>0.89</td>
+		<td>1.40</td>
+		</tr>
+								
+		<tr>
+		<td>19 กรกฎาคม 2562</td>
+		<td>01.00 น.</td>
+		<td>0.92</td>
+		<td>1.80</td>
+		</tr>
+			
+		<tr>
+		<td>19 กรกฎาคม 2562</td>
+		<td>02.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>19 กรกฎาคม 2562</td>
+		<td>03.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>19 กรกฎาคม 2562</td>
+		<td>04.00 น.</td>
+		<td>1.01</td>
+		<td>3.40</td>
+		</tr>
+			
+		<tr>
+		<td>19 กรกฎาคม 2562</td>
+		<td>05.00 น.</td>
+		<td>1.03</td>
+		<td>4.20</td>
+		</tr>
+			
+		<tr>
+		<td>19 กรกฎาคม 2562</td>
+		<td>06.00 น.</td>
+		<td>1.05</td>
+		<td>5.00</td>
+		</tr>
+			
+		<tr>
+		<td>19 กรกฎาคม 2562</td>
+		<td>07.00 น.</td>
+		<td>1.03</td>
+		<td>4.20</td>
+		</tr>
+			
+		<tr>
+		<td>19 กรกฎาคม 2562</td>
+		<td>08.00 น.</td>
+		<td>1.01</td>
+		<td>3.40</td>
+		</tr>
+			
+		<tr>
+		<td>19 กรกฎาคม 2562</td>
+		<td>09.00 น.</td>
+		<td>0.99</td>
+		<td>2.85</td>
+		</tr>
+			
+		<tr>
+		<td>19 กรกฎาคม 2562</td>
+		<td>10.00 น.</td>
+		<td>0.97</td>
+		<td>2.55</td>
+		</tr>
+			
+		<tr>
+		<td>19 กรกฎาคม 2562</td>
+		<td>11.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>19 กรกฎาคม 2562</td>
+		<td>12.00 น.</td>
+		<td>0.94</td>
+		<td>2.10</td>
+		</tr>
+			
+		<tr>
+		<td>19 กรกฎาคม 2562</td>
+		<td>13.00 น.</td>
+		<td>0.93</td>
+		<td>1.95</td>
+		</tr>
+			
+		<tr>
+		<td>19 กรกฎาคม 2562</td>
+		<td>14.00 น.</td>
+		<td>0.92</td>
+		<td>1.80</td>
+		</tr>
+			
+		<tr>
+		<td>19 กรกฎาคม 2562</td>
+		<td>15.00 น.</td>
+		<td>0.92</td>
+		<td>1.80</td>
+		</tr>
+			
+		<tr>
+		<td>19 กรกฎาคม 2562</td>
+		<td>16.00 น.</td>
+		<td>0.92</td>
+		<td>1.80</td>
+		</tr>
+			
+		<tr>
+		<td>19 กรกฎาคม 2562</td>
+		<td>17.00 น.</td>
+		<td>0.92</td>
+		<td>1.80</td>
+		</tr>
+			
+		<tr>
+		<td>19 กรกฎาคม 2562</td>
+		<td>18.00 น.</td>
+		<td>0.91</td>
+		<td>1.65</td>
+		</tr>
+			
+		<tr>
+		<td>19 กรกฎาคม 2562</td>
+		<td>19.00 น.</td>
+		<td>0.91</td>
+		<td>1.65</td>
+		</tr>
+			
+		<tr>
+		<td>19 กรกฎาคม 2562</td>
+		<td>20.00 น.</td>
+		<td>0.91</td>
+		<td>1.65</td>
+		</tr>
+			
+		<tr>
+		<td>19 กรกฎาคม 2562</td>
+		<td>21.00 น.</td>
+		<td>0.90</td>
+		<td>1.50</td>
+		</tr>
+			
+		<tr>
+		<td>19 กรกฎาคม 2562</td>
+		<td>22.00 น.</td>
+		<td>0.90</td>
+		<td>1.50</td>
+		</tr>
+			
+		<tr>
+		<td>19 กรกฎาคม 2562</td>
+		<td>23.00 น.</td>
+		<td>0.89</td>
+		<td>1.40</td>
+		</tr>
+			
+		<tr>
+		<td>19 กรกฎาคม 2562</td>
+		<td>24.00 น.</td>
+		<td>0.89</td>
+		<td>1.40</td>
+		</tr>
+								
+		<tr>
+		<td>20 กรกฎาคม 2562</td>
+		<td>01.00 น.</td>
+		<td>0.90</td>
+		<td>1.50</td>
+		</tr>
+			
+		<tr>
+		<td>20 กรกฎาคม 2562</td>
+		<td>02.00 น.</td>
+		<td>0.91</td>
+		<td>1.65</td>
+		</tr>
+			
+		<tr>
+		<td>20 กรกฎาคม 2562</td>
+		<td>03.00 น.</td>
+		<td>0.91</td>
+		<td>1.65</td>
+		</tr>
+			
+		<tr>
+		<td>20 กรกฎาคม 2562</td>
+		<td>04.00 น.</td>
+		<td>0.92</td>
+		<td>1.80</td>
+		</tr>
+			
+		<tr>
+		<td>20 กรกฎาคม 2562</td>
+		<td>05.00 น.</td>
+		<td>0.92</td>
+		<td>1.80</td>
+		</tr>
+			
+		<tr>
+		<td>20 กรกฎาคม 2562</td>
+		<td>06.00 น.</td>
+		<td>0.93</td>
+		<td>1.95</td>
+		</tr>
+			
+		<tr>
+		<td>20 กรกฎาคม 2562</td>
+		<td>07.00 น.</td>
+		<td>0.94</td>
+		<td>2.10</td>
+		</tr>
+			
+		<tr>
+		<td>20 กรกฎาคม 2562</td>
+		<td>08.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>20 กรกฎาคม 2562</td>
+		<td>09.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>20 กรกฎาคม 2562</td>
+		<td>10.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>20 กรกฎาคม 2562</td>
+		<td>11.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>20 กรกฎาคม 2562</td>
+		<td>12.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>20 กรกฎาคม 2562</td>
+		<td>13.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>20 กรกฎาคม 2562</td>
+		<td>14.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>20 กรกฎาคม 2562</td>
+		<td>15.00 น.</td>
+		<td>0.96</td>
+		<td>2.40</td>
+		</tr>
+			
+		<tr>
+		<td>20 กรกฎาคม 2562</td>
+		<td>16.00 น.</td>
+		<td>0.96</td>
+		<td>2.40</td>
+		</tr>
+			
+		<tr>
+		<td>20 กรกฎาคม 2562</td>
+		<td>17.00 น.</td>
+		<td>0.96</td>
+		<td>2.40</td>
+		</tr>
+			
+		<tr>
+		<td>20 กรกฎาคม 2562</td>
+		<td>18.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>20 กรกฎาคม 2562</td>
+		<td>19.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>20 กรกฎาคม 2562</td>
+		<td>20.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>20 กรกฎาคม 2562</td>
+		<td>21.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>20 กรกฎาคม 2562</td>
+		<td>22.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>20 กรกฎาคม 2562</td>
+		<td>23.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>20 กรกฎาคม 2562</td>
+		<td>24.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+								
+		<tr>
+		<td>21 กรกฎาคม 2562</td>
+		<td>01.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>21 กรกฎาคม 2562</td>
+		<td>02.00 น.</td>
+		<td>0.94</td>
+		<td>2.10</td>
+		</tr>
+			
+		<tr>
+		<td>21 กรกฎาคม 2562</td>
+		<td>03.00 น.</td>
+		<td>0.94</td>
+		<td>2.10</td>
+		</tr>
+			
+		<tr>
+		<td>21 กรกฎาคม 2562</td>
+		<td>04.00 น.</td>
+		<td>0.94</td>
+		<td>2.10</td>
+		</tr>
+			
+		<tr>
+		<td>21 กรกฎาคม 2562</td>
+		<td>05.00 น.</td>
+		<td>0.94</td>
+		<td>2.10</td>
+		</tr>
+			
+		<tr>
+		<td>21 กรกฎาคม 2562</td>
+		<td>06.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>21 กรกฎาคม 2562</td>
+		<td>07.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>21 กรกฎาคม 2562</td>
+		<td>08.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>21 กรกฎาคม 2562</td>
+		<td>09.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>21 กรกฎาคม 2562</td>
+		<td>10.00 น.</td>
+		<td>0.96</td>
+		<td>2.40</td>
+		</tr>
+			
+		<tr>
+		<td>21 กรกฎาคม 2562</td>
+		<td>11.00 น.</td>
+		<td>0.96</td>
+		<td>2.40</td>
+		</tr>
+			
+		<tr>
+		<td>21 กรกฎาคม 2562</td>
+		<td>12.00 น.</td>
+		<td>0.96</td>
+		<td>2.40</td>
+		</tr>
+			
+		<tr>
+		<td>21 กรกฎาคม 2562</td>
+		<td>13.00 น.</td>
+		<td>0.96</td>
+		<td>2.40</td>
+		</tr>
+			
+		<tr>
+		<td>21 กรกฎาคม 2562</td>
+		<td>14.00 น.</td>
+		<td>0.96</td>
+		<td>2.40</td>
+		</tr>
+			
+		<tr>
+		<td>21 กรกฎาคม 2562</td>
+		<td>15.00 น.</td>
+		<td>0.96</td>
+		<td>2.40</td>
+		</tr>
+			
+		<tr>
+		<td>21 กรกฎาคม 2562</td>
+		<td>16.00 น.</td>
+		<td>0.96</td>
+		<td>2.40</td>
+		</tr>
+			
+		<tr>
+		<td>21 กรกฎาคม 2562</td>
+		<td>17.00 น.</td>
+		<td>0.96</td>
+		<td>2.40</td>
+		</tr>
+			
+		<tr>
+		<td>21 กรกฎาคม 2562</td>
+		<td>18.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>21 กรกฎาคม 2562</td>
+		<td>19.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>21 กรกฎาคม 2562</td>
+		<td>20.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>21 กรกฎาคม 2562</td>
+		<td>21.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>21 กรกฎาคม 2562</td>
+		<td>22.00 น.</td>
+		<td>0.95</td>
+		<td>2.25</td>
+		</tr>
+			
+		<tr>
+		<td>21 กรกฎาคม 2562</td>
+		<td>23.00 น.</td>
+		<td>0.96</td>
+		<td>2.40</td>
+		</tr>
+			
+		<tr>
+		<td>21 กรกฎาคม 2562</td>
+		<td>24.00 น.</td>
+		<td>0.96</td>
+		<td>2.40</td>
+		</tr>
+								
+		<tr>
+		<td>22 กรกฎาคม 2562</td>
+		<td>01.00 น.</td>
+		<td>0.98</td>
+		<td>2.70</td>
+		</tr>
+			
+		<tr>
+		<td>22 กรกฎาคม 2562</td>
+		<td>02.00 น.</td>
+		<td>1.00</td>
+		<td>3.00</td>
+		</tr>
+			
+		<tr>
+		<td>22 กรกฎาคม 2562</td>
+		<td>03.00 น.</td>
+		<td>1.02</td>
+		<td>3.80</td>
+		</tr>
+			
+		<tr>
+		<td>22 กรกฎาคม 2562</td>
+		<td>04.00 น.</td>
+		<td>1.04</td>
+		<td>4.60</td>
+		</tr>
+			
+		<tr>
+		<td>22 กรกฎาคม 2562</td>
+		<td>05.00 น.</td>
+		<td>1.06</td>
+		<td>5.40</td>
+		</tr>
+			
+		<tr>
+		<td>22 กรกฎาคม 2562</td>
+		<td>06.00 น.</td>
+		<td>1.08</td>
+		<td>6.20</td>
+		</tr>
+			
+		<tr>
+		<td>22 กรกฎาคม 2562</td>
+		<td>07.00 น.</td>
+		<td>1.10</td>
+		<td>7.00</td>
+		</tr>
+			
+		<tr>
+		<td>22 กรกฎาคม 2562</td>
+		<td>08.00 น.</td>
+		<td>1.11</td>
+		<td>7.40</td>
+		</tr>
+			
+		<tr>
+		<td>22 กรกฎาคม 2562</td>
+		<td>09.00 น.</td>
+		<td>1.11</td>
+		<td>7.40</td>
+		</tr>
+			
+		<tr>
+		<td>22 กรกฎาคม 2562</td>
+		<td>10.00 น.</td>
+		<td>1.12</td>
+		<td>7.80</td>
+		</tr>
+			
+		<tr>
+		<td>22 กรกฎาคม 2562</td>
+		<td>11.00 น.</td>
+		<td>1.12</td>
+		<td>7.80</td>
+		</tr>
+			
+		<tr>
+		<td>22 กรกฎาคม 2562</td>
+		<td>12.00 น.</td>
+		<td>1.13</td>
+		<td>8.20</td>
+		</tr>
+							  
+                </table><br>
+				 </div>  
+				
+						</div> 		  </div>  
+
+
+</body>
+</html>
